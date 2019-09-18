@@ -50,18 +50,12 @@ BOARD_RAMDISK_OFFSET     := 0x01000000
 
 
 # DJ9
-ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),1)
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
 TARGET_KERNEL_CONFIG := m2pro_defconfig
-else
-TARGET_PREBUILT_KERNEL := device/asus/X01BD/Image.gz-dtb
-ifeq ($(FOX_USE_STOCK_KERNEL),1)
-TARGET_PREBUILT_KERNEL := device/asus/X01BD/Image.gz-dtb
-endif
+
 PRODUCT_COPY_FILES += \
     $(TARGET_PREBUILT_KERNEL):kernel
-endif
 
 
 # Partitions
