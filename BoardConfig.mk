@@ -101,6 +101,7 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_USES_64_BIT_BINDER := true
 TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
 TW_RECOVERY_ADDITIONAL_RELINK_FILES := ${OUT}/system/lib64/android.hardware.boot@1.0.so
+TW_HAS_EDL_MODE := true
 
 # exFAT FS Support
 TW_INCLUDE_FUSE_EXFAT := true
